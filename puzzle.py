@@ -3,7 +3,7 @@ Class Puzzle:
     # The responsability of Puzzle is... 
     # Atributes:
     # _letter(int): The letter of the Puzzle
-    # _
+    # _attempt(list[int]): The attemp from the Jumper
     
     def _int_(self):
       #Constructs a ner Puzzle
@@ -11,3 +11,4 @@ Class Puzzle:
       #self(Puzzle): An instance of Puzzle
       
       self._letter = #ramdom list, something
+      self._attempt = #correct/incorrect, something 
