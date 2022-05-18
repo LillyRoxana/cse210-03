@@ -6,7 +6,7 @@ Class Puzzle:
     # _attempt(list[int]): The attempt from the Jumper
     
     def _int_(self):
-      #Constructs a ner Puzzle
+      #Constructs a new Puzzle
       #Args: 
       #self(Puzzle): An instance of Puzzle
       
