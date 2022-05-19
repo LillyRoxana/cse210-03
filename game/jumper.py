@@ -1,4 +1,6 @@
-#import random
+import random
+from game.list_words import list_words
+from game.parachute import parachute
 
 class Jumper:
     """The person who seeks to decipher the Puzzle. 
@@ -17,7 +19,12 @@ class Jumper:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = # random.randint(1, 1000)
+        self._letter = list_words
+        self._attempt = 5
+        self._winner = False
+        self._loser = False
+        self._show = 
+        self._guessing = ""
         
     def get_letter(self):
         """Gets the current letter.
