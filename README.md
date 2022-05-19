@@ -2,6 +2,10 @@
 
 Jumper is a game in which the player seeks to solve a puzzle by guessing the letters of a secret word one at a time.
 
+## Synopsis
+
+### Project Structure
+
 ## Required Technologies
 
 - Python 3.10.0
