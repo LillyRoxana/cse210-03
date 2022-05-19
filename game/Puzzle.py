@@ -2,16 +2,7 @@ import random
 from game.list_words import list_words
 from game.parachute import parachute
 
-class Jumper:
-    """The person who seeks to decipher the Puzzle. 
-    
-    The responsibility of a jumper/player is to keep a record of the letters 
-    he/she has given and the attempts he/she has made (whether these have been correct or incorrect).
-    
-    Attributes:
-        letter (int): The letter proposed by the jumper/player (a-z).
-        attempt (List[int]): The attempts given.
-    """
+class Puzzle:
 
     def __init__(self):
         """Constructs a new Jumper/player.
