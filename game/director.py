@@ -46,7 +46,7 @@ class Director:
         self._jumper.move_letter(new_letter)
         ---------
     def _do_updates(self):
-        """Keeps watch on where the player is moving.
+        """Keeps watch on where the player/jumper is moving.
 
         Args:
             self (Director): An instance of Director.
