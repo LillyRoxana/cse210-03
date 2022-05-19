@@ -20,25 +20,22 @@ class Jumper:
             self (Jumper): An instance of Jumper.
         """
         self._letter = list_words
-        self._attempt = 5
-        self._winner = False
-        self._loser = False
-        self._show = 
+        self._attempt = 0
         self._guessing = ""
         
-    def get_letter(self):
+    def get_letter(self, letter):
         """Gets the current letter.
         
         Returns:
-            letterr: The current letter,
+            letter: The current letter
         """
         return self._letter
         
-    def move_letter(self, letter):
+    def move_letter(self):
         """provides the letter indicated/requested
 
         Args:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
-        self._letter = letter
+        print(self._guessing)
