@@ -27,3 +27,11 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 - Enhanced input validation.
 - Enhanced game play and game over messages.
 - Enhanced game display, e.g. parachute
+
+## Authors
+
+- Josh Ausborne
+- Jesus Tortolero
+- Felix Flores
+- Kaylie Nelson
+- Lilly Armenta
