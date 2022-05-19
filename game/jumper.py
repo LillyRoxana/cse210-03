@@ -1,6 +1,6 @@
-from game import Puzzle
+from game.puzzle import Puzzle
 
-Class Jumper:
+class Jumper:
     """The person who seeks to decipher the Puzzle. 
     
     The responsibility of a jumper/player is to keep a record of the letters 
