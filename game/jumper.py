@@ -32,7 +32,7 @@ class Jumper:
         return self._letter
         
     def move_letter(self):
-        """provides the letter indicated/requested
+        """provides/displays the letter indicated/requested
 
         Args:
             self (Jumper): An instance of Jumper.
