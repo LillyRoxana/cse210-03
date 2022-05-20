@@ -11,7 +11,10 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
         """
         self._letter = list_words
-        self._attempt = 0
+        self._spaces = list(len(self.letter) * '_')
+        self._winner = False
+        self._loser = False
+        self._attempt = 5
         self._guessing = ""
         
     def get_letter(self, letter):
@@ -22,11 +25,12 @@ class Puzzle:
         """
         return self._letter
         
-    def show_letter(self):
+    def show_letters(self):
         """provides/displays the letter indicated/requested
 
         Args:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
+         
         print(self._guessing)
