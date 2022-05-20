@@ -1,7 +1,6 @@
 from game.jumper import Jumper
 from game.puzzle import Puzzle
 from game.terminal_service import Terminal_service
-from game.list_words import List_words
 
 class Director:
     
@@ -24,7 +23,7 @@ class Director:
         self._puzzle = Puzzle()
         self._keep_playing = True
         self._jumper = Jumper()
-        self._status = ""
+        self._status = 0
         self._terminal_service = Terminal_service()
 
     def start_game(self):
@@ -58,6 +57,9 @@ class Director:
             self (Director): An instance of Director.
         """
         self._puzzle.watch_jumper(self._jumper)
+        self._status = self._status +1
+        print(self._status)
+        print("we are in the _do_updates() method")
         
     def _do_outputs(self):
         """Provides a hint for the player to use.
