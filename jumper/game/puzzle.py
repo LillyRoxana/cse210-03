@@ -11,7 +11,8 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
         """
         self._letter = input("Please choose a letter [a-z] ")
-        self._word_list = open("game/word_list.txt","r")
+        print("you choses the letter ", self._letter)
+        self._word_list = open(os.path.join("game","word_list.txt"),"r")
         self._words = self._word_list.readlines()
         self._word = random.choice(self._words)
         print(self._word)
