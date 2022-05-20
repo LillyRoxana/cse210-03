@@ -32,10 +32,14 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        while self.keep_playing:
-            self.get_inputs()
-            self.do_updates()
-            self.do_outputs()
+        while self._keep_playing:
+            self._get_inputs()
+            self._do_updates()
+            self._do_outputs()
+            if self._status == 5:
+                self._keep_playing = False
+                return 
+      
             
      def _get_inputs(self):
         """Moves the player to a new letter space.
@@ -44,8 +48,8 @@ class Director:
             self (Director): An instance of Director.
         """
         new_letter = self._terminal_service.read_word("\nEnter a letter: ")
-        self._jumper.move_letter(new_letter)
-        ---------
+        self._jumper.add_letter(new_letter)
+       
     def _do_updates(self):
         """Keeps watch on where the player/jumper is moving.
 
