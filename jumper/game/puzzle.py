@@ -10,8 +10,8 @@ class Puzzle:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = List_words
-        self._spaces = list(len(self.letter) * '_')
+        self._letter = input("Please choose a letter [a-z] ")
+        self._spaces = list(len(self._letter) * '_')
         self._winner = False
         self._loser = False
         self._attempt = 5
@@ -32,5 +32,16 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
-         
         print(self._guessing)
+
+    # TODO
+    # make the methods/functions actually do stuff
+
+    def watch_jumper(self,blah):
+        pass
+
+    def get_hint(self):
+        pass
+
+    def is_found(self):
+        pass
