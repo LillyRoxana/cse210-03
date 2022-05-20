@@ -24,6 +24,7 @@ class Director:
         self._puzzle = Puzzle()
         self._keep_playing = True
         self._jumper = Jumper()
+        self._status = ""
         self._terminal_service = Terminal_service()
 
     def start_game(self):
@@ -47,8 +48,8 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        new_letter = self._terminal_service.read_word("\nEnter a letter: ")
-        self._jumper.add_letter(new_letter)
+        #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
+        #self._jumper.add_letter(new_letter)
        
     def _do_updates(self):
         """Keeps watch on where the player/jumper is moving.
