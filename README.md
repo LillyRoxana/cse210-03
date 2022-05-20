@@ -6,6 +6,19 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 
 ### Project Structure
 
+    .
+    ├── .gitignore
+    ├── jumper
+    │   ├── __main__.py               # The initial launch file
+    │   └── game
+    │       ├── director.py           # Directs the game action
+    │       ├── jumper.py             # Directs the game action
+    │       ├── list_words.py         # Directs the game action
+    │       ├── parachute.py          # Directs the game action
+    │       ├── puzzle.py             # Directs the game action
+    │       └── terminal_service.py   # performs the game action
+    └── README.md
+
 ## Required Technologies
 
 - Python 3.10.0
