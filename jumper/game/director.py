@@ -41,7 +41,7 @@ class Director:
                 return 
       
             
-     def _get_inputs(self):
+    def _get_inputs(self):
         """Moves the player to a new letter space.
 
         Args:

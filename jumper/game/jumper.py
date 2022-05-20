@@ -8,18 +8,15 @@ class Jumper:
     
     Attributes:
         letter (str): The letter proposed by the jumper/player (a-z).
-       
     """
    
     def __init__(self):
-     """Constructs a new Jumper/Player
-     
-      Args: 
-        self(Puzzle): An instance of Jumper
-     """
-    
-      self._letter = []
+        """Constructs a new Jumper/Player
+         
+        Args: 
+            self(Puzzle): An instance of Jumper
+        """
+        self._letter = []
       
     def add_letter(self, letter):
-        
-      self._letter.append(letter.lower()) 
+        self._letter.append(letter.lower()) 
