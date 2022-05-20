@@ -1,5 +1,5 @@
 import random
-from game.list_words import List_words
+import os
 from game.parachute import parachute
 
 class Puzzle:
@@ -11,6 +11,10 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
         """
         self._letter = input("Please choose a letter [a-z] ")
+        self._word_list = open("game/word_list.txt","r")
+        self._words = self._word_list.readlines()
+        self._word = random.choice(self._words)
+        print(self._word)
         self._spaces = list(len(self._letter) * '_')
         self._winner = False
         self._loser = False
