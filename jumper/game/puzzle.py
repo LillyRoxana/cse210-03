@@ -1,5 +1,5 @@
 import random
-from game.list_words import list_words
+from game.list_words import List_words
 from game.parachute import parachute
 
 class Puzzle:
@@ -10,7 +10,7 @@ class Puzzle:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = list_words
+        self._letter = List_words
         self._spaces = list(len(self.letter) * '_')
         self._winner = False
         self._loser = False
