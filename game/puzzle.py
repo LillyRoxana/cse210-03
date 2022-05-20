@@ -22,7 +22,7 @@ class Puzzle:
         """
         return self._letter
         
-    def move_letter(self):
+    def show_letter(self):
         """provides/displays the letter indicated/requested
 
         Args:
