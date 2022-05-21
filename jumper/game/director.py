@@ -47,6 +47,7 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        #new_letter = self._terminal_service.read_letter("\nGuess a letter [a-z]: ")
         #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
         #self._jumper.add_letter(new_letter)
        
