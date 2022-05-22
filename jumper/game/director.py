@@ -59,6 +59,7 @@ class Director:
         """
         self._puzzle.watch_jumper(self._jumper)
         self._status = self._status +1
+        # print some things so we can tell where we are
         print(self._status)
         print("we are in the _do_updates() method")
         
