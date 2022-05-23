@@ -49,8 +49,13 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        new_letter = self._puzzle.get_letter("\nGuess a letter [a-z], please")
-        #self._jumper.add
+        # get_letter is in Puzzle.py
+        # add_letter is in Jumper.py
+        
+        new_letter = self._puzzle.get_letter("\nGuess a letter [a-z], please: ")
+        self._jumper.add_letter(new_letter)
+        
+        
         #new_letter = self._terminal_service.read_letter("\nGuess a letter [a-z]: ")
         #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
         #self._jumper.add_letter(new_letter)
@@ -61,11 +66,14 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        self._puzzle.watch_jumper(self._jumper)
-        self._status = self._status +1
+        
+        
+        
+        #self._puzzle.watch_jumper(self._jumper)
+        #self._status = self._status +1
         # print some things so we can tell where we are
-        print(self._status)
-        print("we are in the _do_updates() method")
+        #print(self._status)
+        #print("we are in the _do_updates() method")
         
     def _do_outputs(self):
         """Provides a hint for the player to use.
@@ -73,7 +81,10 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        hint = self._puzzle.get_hint()
-        self._terminal_service.write_text(hint)
-        if self._puzzle.is_found():
-            self._keep_playing = False
+        
+        
+        
+        #hint = self._puzzle.get_hint()
+        #self._terminal_service.write_text(hint)
+        #if self._puzzle.is_found():
+        #    self._keep_playing = False
