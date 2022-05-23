@@ -184,11 +184,18 @@ class word_list:
       
     return False 
   
-  def lets_to_count_attempts(self, player):
+  def lets_to_count_attempts(self, guess_player):
     
     attempt = 0
     
-    for 
+    for guess_letter in guess_player._word:
+      if guess_letter in self._word_list:
+        pass
+      else:
+        attempt += 1
+    return attempt    
+      
+      
   
 
         
