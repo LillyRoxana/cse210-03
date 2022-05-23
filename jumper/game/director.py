@@ -23,8 +23,8 @@ class Director:
         self._puzzle = Puzzle()
         self._keep_playing = True
         self._jumper = Jumper()
-        self._status = 0
-        self._terminal_service = Terminal_service()
+        #self._status = 0
+        #self._terminal_service = Terminal_service()
         self._word_list = word_list()
 
     def start_game(self):
@@ -67,7 +67,10 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        self._puzzle._guessing = self._word_list.
+        self._puzzle._guessing = self._word_list.lets_to_compare(self._jumper)
+        self._puzzle._attempt = self._word_list.lets_to_count_attempts(self._jumper)
+        
+        self._status = self._puzzle._attempt
         
         #self._puzzle.watch_jumper(self._jumper)
         #self._status = self._status +1
