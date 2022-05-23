@@ -25,6 +25,7 @@ class Director:
         self._jumper = Jumper()
         self._status = 0
         self._terminal_service = Terminal_service()
+        self._word_list = word_list()
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -47,6 +48,9 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        
+        new_letter = self._puzzle.get_letter("\nGuess a letter [a-z], please")
+        #self._jumper.add
         #new_letter = self._terminal_service.read_letter("\nGuess a letter [a-z]: ")
         #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
         #self._jumper.add_letter(new_letter)
