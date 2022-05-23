@@ -151,7 +151,23 @@ class word_list:
       choose = random.randint(1,137)
       self._word_list = word_list[choose].lower()
       
-      """
+      
+  """
+  letter_found 
+  
+  """
+  
+  def letter_found(self, guessed_word):
+    
+    for letter in self._word_list:
+      if letter in guessed_word:
+        pass
+      else:
+        return True
+      
+    return False 
+  
+   """
       lets_to_compare 
       
       """
@@ -169,20 +185,11 @@ class word_list:
     
     return guess
   
-  """
-  letter_found 
   
   """
+  lets_to_count_attempts
   
-  def letter_found(self, guessed_word):
-    
-    for letter in self._word_list:
-      if letter in guessed_word:
-        pass
-      else:
-        return True
-      
-    return False 
+  """
   
   def lets_to_count_attempts(self, guess_player):
     
