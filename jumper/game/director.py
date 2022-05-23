@@ -84,7 +84,10 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        self._puzzle.show_letters()
+        self._puzzle.get_try()
         
+        self._keep_playing = self._word_list.letter_found(self._guess_player._word)
         
         
         #hint = self._puzzle.get_hint()
