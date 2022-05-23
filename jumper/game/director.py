@@ -67,7 +67,7 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        
+        self._puzzle._guessing = self._word_list.
         
         #self._puzzle.watch_jumper(self._jumper)
         #self._status = self._status +1
