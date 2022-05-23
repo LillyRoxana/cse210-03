@@ -144,23 +144,37 @@ class word_list:
       137: "lively",
      }
       
+      """
+      The program selects a word from the list called "word_list", 
+      makes the word lowercase (in case any of it is written with an uppercase letter """
+    
       choose = random.randint(1,137)
       self._word_list = word_list[choose].lower()
       
-  def lets_to_compare(self, player):
+      """
+      lets_to_compare 
+      
+      """
+      
+  def lets_to_compare(self, guess_player):
     
     guess = ""
     
     for letter in self._word_list:
-      if letter in player._word:
+      if letter in guess_player._word:
         guess += letter
         
       else:
-        guess +=
+        guess += "_"
     
     return guess
   
-  def letter_founded(self, guessed_word):
+  """
+  letter_found 
+  
+  """
+  
+  def letter_found(self, guessed_word):
     
     for letter in self._word_list:
       if letter in guessed_word:
@@ -170,6 +184,11 @@ class word_list:
       
     return False 
   
+  def lets_to_count_attempts(self, player):
+    
+    attempt = 0
+    
+    for 
   
 
         
