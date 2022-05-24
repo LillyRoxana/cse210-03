@@ -1,4 +1,4 @@
-try:
+
 
   import random
   class word_list:
@@ -162,7 +162,6 @@ try:
         attempt += 1
     return attempt    
 
-except ModuleNotFoundError:
-    print('\nError [random] can´t be located by word_list.py...')  
+
   
 
