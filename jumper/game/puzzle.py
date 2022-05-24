@@ -52,7 +52,7 @@ class Puzzle:
             self.puzzle_attempt4()
         elif self._attempt == 4:      
             self.puzzle_attempt5()
-        else self._attempt == 5:       #I am no too sure if is "else" or "elif"
+        elif self._attempt == 5:       #I am no too sure if is "else" or "elif"
             self.puzzle_attempt6()
         
             
