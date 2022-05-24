@@ -1,10 +1,9 @@
-import random
+try:
 
-class word_list:
-  
-  def __init__(self):
-    
-    word_list = {
+  import random
+  class word_list:
+    def __init__(self):
+      word_list = {
       1: "wares",
       2: "soup",
       3: "mount",
@@ -105,24 +104,21 @@ class word_list:
       98: "serve",
       99: "borrower",
       100: "examine",
-     
+      
      }
       
-      """
-      The program selects a word from the list called "word_list", 
-      makes the word lowercase (in case any of it is written with an uppercase letter """
+##      """
+##      The program selects a word from the list called "word_list", 
+##      makes the word lowercase (in case any of it is written with an uppercase letter """
     
       choose = random.randint(1,100)
       self._word_list = word_list[choose].lower()
       
       
-  """
-  letter_found 
-  
-  """
-  
+## """
+##  
+##  """
   def letter_found(self, guessed_word):
-    
     for letter in self._word_list:
       if letter in guessed_word:
         pass
@@ -131,10 +127,10 @@ class word_list:
       
     return False 
   
-   """
-      lets_to_compare 
-      
-      """
+##   """
+##      lets_to_compare 
+##      
+##      """
       
   def lets_to_compare(self, guess_player):
     
@@ -150,10 +146,10 @@ class word_list:
     return guess
   
   
-  """
-  lets_to_count_attempts
+##  """
+##  lets_to_count_attempts
   
-  """
+ # """
   
   def lets_to_count_attempts(self, guess_player):
     
@@ -165,10 +161,8 @@ class word_list:
       else:
         attempt += 1
     return attempt    
-      
-      
+
+except ModuleNotFoundError:
+    print('\nError [random] can´t be located by word_list.py...')  
   
 
-        
-
-    
