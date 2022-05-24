@@ -1,7 +1,5 @@
-
-
-  import random
-  class word_list:
+import random
+class word_list:
     def __init__(self):
       word_list = {
       1: "wares",
@@ -118,32 +116,32 @@
 ## """
 ##  
 ##  """
-  def letter_found(self, guessed_word):
-    for letter in self._word_list:
-      if letter in guessed_word:
-        pass
-      else:
-        return True
+    def letter_found(self, guessed_word):
+        for letter in self._word_list:
+        if letter in guessed_word:
+            pass
+        else:
+            return True
       
-    return False 
+        return False 
   
 ##   """
 ##      lets_to_compare 
 ##      
 ##      """
       
-  def lets_to_compare(self, guess_player):
+    def lets_to_compare(self, guess_player):
     
-    guess = ""
+        guess = ""
     
-    for letter in self._word_list:
-      if letter in guess_player._word:
-        guess += letter
+        for letter in self._word_list:
+        if letter in guess_player._word:
+            guess += letter
         
-      else:
-        guess += "_"
+        else:
+            guess += "_"
     
-    return guess
+        return guess
   
   
 ##  """
@@ -151,17 +149,14 @@
   
  # """
   
-  def lets_to_count_attempts(self, guess_player):
+    def lets_to_count_attempts(self, guess_player):
     
-    attempt = 0
+        attempt = 0
     
-    for guess_letter in guess_player._word:
-      if guess_letter in self._word_list:
-        pass
-      else:
-        attempt += 1
-    return attempt    
-
-
-  
+        for guess_letter in guess_player._word:
+        if guess_letter in self._word_list:
+            pass
+         else:
+            attempt += 1
+        return attempt    
 
