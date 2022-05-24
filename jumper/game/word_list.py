@@ -2,7 +2,7 @@ import random
 
 class word_list:
   
-  del __init__(self):
+  def __init__(self):
     
     word_list = {
       1: "wares",
