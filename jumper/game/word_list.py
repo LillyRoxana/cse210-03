@@ -105,50 +105,14 @@ class word_list:
       98: "serve",
       99: "borrower",
       100: "examine",
-      10l: "legal",
-      102: "outlive",
-      103: "unnamed",
-      104: "unending",
-      105: "snow",
-      106: "whisper",
-      107: "bundle",
-      108: "bracket",
-      109: "deny",
-      110: "blurred",
-      111: "pentagon",
-      112: "reformed",
-      113: "polarity",
-      114: "jumping",
-      115: "again",
-      116: "laundry",
-      117: "hobble",
-      118: "culture",
-      119: "whittle",
-      120: "docket",
-      121: "mayhem",
-      122: "build",
-      123: "peel",
-      124: "board",
-      125: "keen",
-      126: "glorious",
-      127: "singular",
-      128: "cavalry",
-      129: "present",
-      130: "cold",
-      131: "hook",
-      132: "salted",
-      133: "just",
-      134: "dumpling",
-      135: "glimmer",
-      136: "drowning",
-      137: "lively",
+     
      }
       
       """
       The program selects a word from the list called "word_list", 
       makes the word lowercase (in case any of it is written with an uppercase letter """
     
-      choose = random.randint(1,137)
+      choose = random.randint(1,100)
       self._word_list = word_list[choose].lower()
       
       
