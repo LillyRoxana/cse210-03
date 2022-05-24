@@ -1,6 +1,6 @@
 import random
 import os
-from game.parachute import parachute
+#from game.parachute import parachute
 
 class Puzzle:
 
