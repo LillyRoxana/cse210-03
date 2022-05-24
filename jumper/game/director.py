@@ -1,6 +1,7 @@
 from game.jumper import Jumper
 from game.puzzle import Puzzle
 from game.terminal_service import Terminal_service
+from game.word_list import word_list
 
 class Director:
     
