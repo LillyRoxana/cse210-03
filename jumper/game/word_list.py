@@ -115,7 +115,7 @@ try:
             pass
           else:
             return True
-          return False 
+        return False 
   
 
       def compare(self, guess_player):
@@ -134,7 +134,7 @@ try:
             pass
           else:
             attempt += 1
-            return attempt    
+        return attempt    
 
 
 
