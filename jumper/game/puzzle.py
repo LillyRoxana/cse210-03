@@ -56,84 +56,84 @@ class Puzzle:
             self.puzzle_attempt6()
         
             
-    def puzzle_attempt1:
-         
-    print()        
-    print("       _____        ")     
-    print("      /_____\       ") 
-    print("      \     /       ")
-    print("       \   /        ")
-    print("        \ /         ")
-    print("         O          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")
+   def puzzle_attempt1() :
+        
+        print()        
+        print("       _____        ")     
+        print("      /_____\       ") 
+        print("      \     /       ")
+        print("       \   /        ")
+        print("        \ /         ")
+        print("         O          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")
            
-    def puzzle_attempt2:
+    def puzzle_attempt2() :
+         
+        print()        
+        print("                    ")     
+        print("      /_____\       ") 
+        print("      \     /       ")
+        print("       \   /        ")
+        print("        \ /         ")
+        print("         O          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")    
         
-    print()        
-    print("                    ")     
-    print("      /_____\       ") 
-    print("      \     /       ")
-    print("       \   /        ")
-    print("        \ /         ")
-    print("         O          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")    
+    def puzzle_attempt3() :
         
-    def puzzle_attempt3:
-        
-    print()        
-    print("                    ")     
-    print("                    ") 
-    print("      \     /       ")
-    print("       \   /        ")
-    print("        \ /         ")
-    print("         O          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")   
+        print()        
+        print("                    ")     
+        print("                    ") 
+        print("      \     /       ")
+        print("       \   /        ")
+        print("        \ /         ")
+        print("         O          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")   
     
-    def puzzle_attempt4:
+    def puzzle_attempt4() :
         
-    print()        
-    print("                    ")     
-    print("                    ") 
-    print("                    ")
-    print("       \   /        ")
-    print("        \ /         ")
-    print("         O          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")       
+        print()        
+        print("                    ")     
+        print("                    ") 
+        print("                    ")
+        print("       \   /        ")
+        print("        \ /         ")
+        print("         O          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")       
         
     
-    def puzzle_attempt5:
+    def puzzle_attempt5() :
     
-    print()        
-    print("                    ")     
-    print("                    ") 
-    print("                    ")
-    print("                    ")
-    print("        \ /         ")
-    print("         O          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")  
+        print()        
+        print("                    ")     
+        print("                    ") 
+        print("                    ")
+        print("                    ")
+        print("        \ /         ")
+        print("         O          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")  
 
-    def puzzle_attempt6:
+    def puzzle_attempt6() :
     
-    print()        
-    print("                    ")     
-    print("                    ") 
-    print("                    ")
-    print("                    ")
-    print("                    ")
-    print("         X          ")
-    print("        /|\         ")
-    print("        / \         ")
-    print("   ^^^^^^^^^^^^^    ")  
+        print()        
+        print("                    ")     
+        print("                    ") 
+        print("                    ")
+        print("                    ")
+        print("                    ")
+        print("         X          ")
+        print("        /|\         ")
+        print("        / \         ")
+        print("   ^^^^^^^^^^^^^    ")  
 
     
     # TODO
