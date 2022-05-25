@@ -60,7 +60,7 @@ class Director:
         # get_letter is in Puzzle.py
         # add_letter is in Jumper.py
         
-        new_letter = self._puzzle.get_letter("\nGuess a letter [a-z], please: ")
+        new_letter = self._puzzle.get_letter("\nGuess a new letter [a-z], please: ")
         self._jumper.add_letter(new_letter)
         
         
