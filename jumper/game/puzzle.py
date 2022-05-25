@@ -11,8 +11,8 @@ class Puzzle:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = input("Please choose a letter [a-z] ")
-        print("you chose the letter ", self._letter)
+        self._letter = input("Please choose a letter [a-z]: ")
+        print("you chose the letter: ", self._letter)
         self._spaces = list(len(self._letter) * '_')
         self._winner = False
         self._loser = False
