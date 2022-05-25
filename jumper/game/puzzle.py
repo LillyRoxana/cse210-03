@@ -1,7 +1,7 @@
 import random
 import os
 #from game.parachute import parachute
-import game.word_list
+#import game.word_list
 
 class Puzzle:
 
