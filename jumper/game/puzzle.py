@@ -1,6 +1,7 @@
 import random
 import os
 #from game.parachute import parachute
+import game.word_list
 
 class Puzzle:
 
@@ -12,10 +13,6 @@ class Puzzle:
         """
         self._letter = input("Please choose a letter [a-z] ")
         print("you chose the letter ", self._letter)
-        self._word_list = open(os.path.join("game","word_list.txt"),"r")
-        self._words = self._word_list.readlines()
-        self._word = random.choice(self._words)
-        print(self._word)
         self._spaces = list(len(self._letter) * '_')
         self._winner = False
         self._loser = False
@@ -56,7 +53,7 @@ class Puzzle:
             self.puzzle_attempt6()
         
             
-   def puzzle_attempt1() :
+    def puzzle_attempt1() :
         
         print()        
         print("       _____        ")     
