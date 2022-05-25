@@ -1,7 +1,10 @@
 from game.jumper import Jumper
 from game.puzzle import Puzzle
 from game.terminal_service import Terminal_service
-from game.word_list import word_list
+from game.word_list import Word_list
+from game import ROOT_DIR,DATA_DIR
+import os
+import random
 
 class Director:
     
@@ -26,7 +29,11 @@ class Director:
         self._jumper = Jumper()
         #self._status = 0
         #self._terminal_service = Terminal_service()
-        self._word_list = word_list()
+        self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
+        self._word_list = self._word_list.readlines()
+        self._random_word = random.choice(self._word_list)
+        # print random_word for testing
+        print(self._random_word)
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -68,8 +75,8 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        self._puzzle._guessing = self._word_list.lets_to_compare(self._jumper)
-        self._puzzle._attempt = self._word_list.lets_to_count_attempts(self._jumper)
+        self._puzzle._guessing = self._random_word.lets_to_compare(self._jumper)
+        self._puzzle._attempt = self._random_word_list.lets_to_count_attempts(self._jumper)
         
         self._status = self._puzzle._attempt
         
@@ -88,7 +95,7 @@ class Director:
         self._puzzle.show_letters()
         self._puzzle.get_try()
         
-        self._keep_playing = self._word_list.letter_found(self._guess_player._word)
+        self._keep_playing = self._random_word.letter_found(self._guess_player._word)
         
         
         #hint = self._puzzle.get_hint()
