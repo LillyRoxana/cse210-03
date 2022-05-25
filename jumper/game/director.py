@@ -75,8 +75,8 @@ class Director:
             self (Director): An instance of Director.
         """
         
-        self._puzzle._guessing = self._random_word.compare(self._jumper)
-        self._puzzle._attempt = self._random_word_list.lets_to_count_attempts(self._jumper)
+        #self._puzzle._guessing = self._random_word.compare(self._jumper) this works with word_list.py
+        #self._puzzle._attempt = self._random_word_list.lets_to_count_attempts(self._jumper)
         
         self._status = self._puzzle._attempt
         
