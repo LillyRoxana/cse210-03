@@ -2,7 +2,6 @@ from game.jumper import Jumper
 from game.puzzle import Puzzle
 from game.parachute import Parachute
 from game.terminal_service import Terminal_service
-#from game.word_list import Word_list
 from game import ROOT_DIR,DATA_DIR
 import os
 import random
@@ -25,6 +24,17 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        # open the word_list.txt and pick a random word
+        self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
+        self._word_list = self._word_list.readlines()
+        self.random_word = random.choice(self._word_list)
+        print(self.random_word)
+        # scramble the random word and rewrite it as _____
+        self._scrambled_word = ""
+        self._scrambled_word = (len(self.random_word) -1 ) * "_"
+        print("Your word is " + self._scrambled_word)
+        print()
+
         self._puzzle = Puzzle()
         self._is_playing = True
         self._jumper = Jumper()
@@ -34,6 +44,7 @@ class Director:
         #self._terminal_service = Terminal_service()
         # print random_word for testing
         #print(self._random_word)
+
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -71,8 +82,25 @@ class Director:
         
         #new_letter = self._terminal_service.read_letter("\nGuess a letter [a-z]: ")
         #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
+        this_letter = self._puzzle.get_letter()
+        if this_letter == "":
+            print("You did not choose a letter.")
+            self._get_inputs()
+        print("You have guessed " + this_letter)
+        self.find_letter_in_word(this_letter)
+
+
+    def find_letter_in_word(self,this_letter):
+        letter_position = self.random_word.find(this_letter) + 1
+        print(letter_position)
+
+        #new_letter = self._puzzle.get_letter()
+        #print(new_letter)
+
         #self._jumper.add_letter(new_letter)
-       
+        
+
+        
     def _do_updates(self):
         """Keeps watch on where the player/jumper is moving.
 
@@ -90,12 +118,8 @@ class Director:
                 
                 
         #self._status = self._puzzle._attempt
+        self._status = self._puzzle._attempt
         
-        #self._puzzle.watch_jumper(self._jumper)
-        #self._status = self._status +1
-        # print some things so we can tell where we are
-        #print(self._status)
-        #print("we are in the _do_updates() method")
         
     def _do_outputs(self):
         """Provides a hint for the player to use.
@@ -105,11 +129,7 @@ class Director:
         """
         self._puzzle.show_letters()
         self._puzzle.get_try()
+
+        self._keep_playing = self.random_word.letter_found(self._guess_player._word)
         
-        self._keep_playing = self._random_word.letter_found(self._guess_player._word)
         
-        
-        #hint = self._puzzle.get_hint()
-        #self._terminal_service.write_text(hint)
-        #if self._puzzle.is_found():
-        #    self._keep_playing = False

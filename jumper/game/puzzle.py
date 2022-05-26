@@ -1,6 +1,7 @@
 import random
 import os
 from game import ROOT_DIR,DATA_DIR
+
 class Puzzle:
 
     def __init__(self):
@@ -27,14 +28,21 @@ class Puzzle:
         return self._random_word
     
     def get_letter(self, letter):
+        self._winner = False
+        self._loser = False
+        self._attempt = 0
+        self._guessing = ""
+        
+    def get_letter(self):
         """Gets the current letter.
         
         Returns:
             letter: The current letter
         """
-        #return self._letter
-        return input(letter)
-    
+        self.letter = input("Please choose a letter [a-z]: ").lower()
+        return self.letter
+
+
     def show_letters(self):
         """provides/displays the letter indicated/requested
 
@@ -42,20 +50,25 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
-        print(self._guessing)
+
         
     def get_try(self):
         
         if self._attempt == 0:
             self.puzzle_attempt1()
+            self.get_letter()
         elif self._attempt == 1:
             self.puzzle_attempt2()
+            self.get_letter()
         elif self._attempt == 2:
             self.puzzle_attempt3()
+            self.get_letter()
         elif self._attempt == 3:
             self.puzzle_attempt4()
+            self.get_letter()
         elif self._attempt == 4:      
             self.puzzle_attempt5()
+            self.get_letter()
         elif self._attempt == 5:       #I am no too sure if is "else" or "elif"
             self.puzzle_attempt6()
         
@@ -140,14 +153,3 @@ class Puzzle:
         print("   ^^^^^^^^^^^^^    ")  
 
     
-    # TODO
-    # make the methods/functions actually do stuff
-
-    #def watch_jumper(self,blah):
-        #pass
-
-    #def get_hint(self):
-        #pass
-
-    #def is_found(self):
-     #   pass
