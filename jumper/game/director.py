@@ -1,7 +1,6 @@
 from game.jumper import Jumper
 from game.puzzle import Puzzle
 from game.terminal_service import Terminal_service
-#from game.word_list import Word_list
 from game import ROOT_DIR,DATA_DIR
 import os
 import random
