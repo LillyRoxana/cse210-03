@@ -17,6 +17,7 @@ class Puzzle:
         self._words_list = lines.splitlines()
         self._f.close()
         #print(self._words_list)
+        self._attempt = 0
     
     def random_word(self):
         #from the list select one word
@@ -30,16 +31,16 @@ class Puzzle:
     def get_letter(self, letter):
         self._winner = False
         self._loser = False
-        self._attempt = 0
+        
         self._guessing = ""
         
-    def get_letter(self):
+    def get_letter(self,text):
         """Gets the current letter.
         
         Returns:
             letter: The current letter
         """
-        self.letter = input("Please choose a letter [a-z]: ").lower()
+        self.letter = input(text)
         return self.letter
 
 
@@ -52,24 +53,24 @@ class Puzzle:
         """
 
         
-    def get_try(self):
+    def get_try(self,attempt):
         
-        if self._attempt == 0:
+        if attempt == 0:
             self.puzzle_attempt1()
-            self.get_letter()
-        elif self._attempt == 1:
+            #self.get_letter()
+        elif attempt == 1:
             self.puzzle_attempt2()
-            self.get_letter()
-        elif self._attempt == 2:
+            #self.get_letter()
+        elif attempt == 2:
             self.puzzle_attempt3()
-            self.get_letter()
-        elif self._attempt == 3:
+            #self.get_letter()
+        elif attempt == 3:
             self.puzzle_attempt4()
-            self.get_letter()
-        elif self._attempt == 4:      
+            #self.get_letter()
+        elif attempt == 4:      
             self.puzzle_attempt5()
-            self.get_letter()
-        elif self._attempt == 5:       #I am no too sure if is "else" or "elif"
+            #self.get_letter()
+        elif attempt == 5:       #I am no too sure if is "else" or "elif"
             self.puzzle_attempt6()
         
             
