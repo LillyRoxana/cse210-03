@@ -1,8 +1,6 @@
 import random
 import os
-#from game.parachute import parachute
-#import game.word_list
-
+from game import ROOT_DIR,DATA_DIR
 class Puzzle:
 
     def __init__(self):
@@ -11,14 +9,23 @@ class Puzzle:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = input("Please choose a letter [a-z]: ")
-        print("you chose the letter: ", self._letter)
-        self._spaces = list(len(self._letter) * '_')
-        self._winner = False
-        self._loser = False
-        self._attempt = 0
-        self._guessing = ""
+        self._random_word=""
+        self._f = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
+        self._words_list = []
+        lines = self._f.read()
+        self._words_list = lines.splitlines()
+        self._f.close()
+        #print(self._words_list)
+    
+    def random_word(self):
+        #from the list select one word
+        self._random_word = random.choice(self._words_list)
+        print(self._random_word)
         
+    def get_word(self):
+        #This method will get the private random word. 
+        return self._random_word
+    
     def get_letter(self, letter):
         """Gets the current letter.
         
@@ -53,7 +60,7 @@ class Puzzle:
             self.puzzle_attempt6()
         
             
-    def puzzle_attempt1() :
+    def puzzle_attempt1(self) :
         
         print()        
         print("       _____        ")     
@@ -66,7 +73,7 @@ class Puzzle:
         print("        / \         ")
         print("   ^^^^^^^^^^^^^    ")
            
-    def puzzle_attempt2() :
+    def puzzle_attempt2(self) :
          
         print()        
         print("                    ")     
@@ -79,7 +86,7 @@ class Puzzle:
         print("        / \         ")
         print("   ^^^^^^^^^^^^^    ")    
         
-    def puzzle_attempt3() :
+    def puzzle_attempt3(self) :
         
         print()        
         print("                    ")     
@@ -92,7 +99,7 @@ class Puzzle:
         print("        / \         ")
         print("   ^^^^^^^^^^^^^    ")   
     
-    def puzzle_attempt4() :
+    def puzzle_attempt4(self) :
         
         print()        
         print("                    ")     
@@ -106,7 +113,7 @@ class Puzzle:
         print("   ^^^^^^^^^^^^^    ")       
         
     
-    def puzzle_attempt5() :
+    def puzzle_attempt5(self) :
     
         print()        
         print("                    ")     
@@ -119,7 +126,7 @@ class Puzzle:
         print("        / \         ")
         print("   ^^^^^^^^^^^^^    ")  
 
-    def puzzle_attempt6() :
+    def puzzle_attempt6(self) :
     
         print()        
         print("                    ")     

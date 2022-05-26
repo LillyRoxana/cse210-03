@@ -10,7 +10,7 @@ class Terminal_service:
                     prompt (string): The prompt to display on the terminal.
 
                 Returns:
-                    float: The user's input as a number.
+                    a string: The user's input as a letter.
                 """
         return input(prompt)
 

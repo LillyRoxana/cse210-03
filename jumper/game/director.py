@@ -1,5 +1,6 @@
 from game.jumper import Jumper
 from game.puzzle import Puzzle
+from game.parachute import Parachute
 from game.terminal_service import Terminal_service
 #from game.word_list import Word_list
 from game import ROOT_DIR,DATA_DIR
@@ -25,15 +26,14 @@ class Director:
             self (Director): an instance of Director.
         """
         self._puzzle = Puzzle()
-        self._keep_playing = True
+        self._is_playing = True
         self._jumper = Jumper()
+        self._parachute = Parachute()
+        self._puzzle_word = ""
         #self._status = 0
         #self._terminal_service = Terminal_service()
-        self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
-        self._word_list = self._word_list.readlines()
-        self._random_word = random.choice(self._word_list)
         # print random_word for testing
-        print(self._random_word)
+        #print(self._random_word)
 
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -41,12 +41,17 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        while self._keep_playing:
+        self._puzzle.random_word()
+        self._puzzle_word = self._puzzle.get_word()
+        self._jumper.get_letters(self._puzzle_word)
+        self._parachute.show_parachute(5)
+        self.new_letter=''
+        while self._is_playing:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
             if self._status == 5:
-                self._keep_playing = False
+                self._is_playing = False
                 return 
       
             
@@ -60,9 +65,9 @@ class Director:
         # get_letter is in Puzzle.py
         # add_letter is in Jumper.py
         
-        new_letter = self._puzzle.get_letter("\nGuess a new letter [a-z], please: ")
-        self._jumper.add_letter(new_letter)
-        
+        self.new_letter = self._puzzle.get_letter("\nGuess a letter [a-z], please: ")
+        self.test = self._jumper.add_letter(self.new_letter,self._puzzle_word)
+        print (self.test)
         
         #new_letter = self._terminal_service.read_letter("\nGuess a letter [a-z]: ")
         #new_letter = self._terminal_service.read_word("\nEnter a letter: ")
@@ -77,8 +82,14 @@ class Director:
         
         #self._puzzle._guessing = self._random_word.compare(self._jumper) this works with word_list.py
         #self._puzzle._attempt = self._random_word_list.lets_to_count_attempts(self._jumper)
-        
-        self._status = self._puzzle._attempt
+        print(self._jumper._letters)
+        for letter in self._puzzle_word:
+            if self.new_letter in self._puzzle_word:
+                pass
+                
+                
+                
+        #self._status = self._puzzle._attempt
         
         #self._puzzle.watch_jumper(self._jumper)
         #self._status = self._status +1
