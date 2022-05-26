@@ -53,7 +53,7 @@ class Puzzle:
             self.puzzle_attempt6()
         
             
-    def puzzle_attempt1() :
+    def puzzle_attempt1(self) :
         
         print()        
         print("       _____        ")     
