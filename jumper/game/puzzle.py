@@ -20,13 +20,8 @@ class Puzzle:
         Returns:
             letter: The current letter
         """
-        self._letter = input("Please choose a letter [a-z]: ").lower()
-        if self._letter == "":
-            print("You did not choose a letter")
-            self.get_letter()
-        else:
-            print("you chose the letter: ", self._letter)
-            self.show_letters()
+        self.letter = input("Please choose a letter [a-z]: ").lower()
+        return self.letter
 
 
     def show_letters(self):
@@ -36,10 +31,6 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
-        if random_word.find(self._letter):
-            print("letter '" + self._letter + "' is found")
-        else:
-            print("letter '" + self._letter + "' is not found")
 
         
     def get_try(self):
