@@ -18,5 +18,5 @@ class Jumper:
         """
         self._letter = []
       
-    def add_letter(self, letter):
-        self._letter.append(letter) 
+#    def add_letter(self, letter):
+#        self._letter.append(letter) 
