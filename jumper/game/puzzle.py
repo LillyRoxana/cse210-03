@@ -1,7 +1,5 @@
 import random
 import os
-#from game.parachute import parachute
-#import game.word_list
 
 class Puzzle:
 
@@ -11,23 +9,26 @@ class Puzzle:
         Args:
             self (Jumper): An instance of Jumper.
         """
-        self._letter = input("Please choose a letter [a-z]: ")
-        print("you chose the letter: ", self._letter)
-        self._spaces = list(len(self._letter) * '_')
         self._winner = False
         self._loser = False
         self._attempt = 0
         self._guessing = ""
         
-    def get_letter(self, letter):
+    def get_letter(self):
         """Gets the current letter.
         
         Returns:
             letter: The current letter
         """
-        #return self._letter
-        return input(letter)
-    
+        self._letter = input("Please choose a letter [a-z]: ").lower()
+        if self._letter == "":
+            print("You did not choose a letter")
+            self.get_letter()
+        else:
+            print("you chose the letter: ", self._letter)
+            self.show_letters()
+
+
     def show_letters(self):
         """provides/displays the letter indicated/requested
 
@@ -35,20 +36,29 @@ class Puzzle:
             self (Jumper): An instance of Jumper.
             letter (int): The given letter.
         """
-        print(self._guessing)
+        if random_word.find(self._letter):
+            print("letter '" + self._letter + "' is found")
+        else:
+            print("letter '" + self._letter + "' is not found")
+
         
     def get_try(self):
         
         if self._attempt == 0:
             self.puzzle_attempt1()
+            self.get_letter()
         elif self._attempt == 1:
             self.puzzle_attempt2()
+            self.get_letter()
         elif self._attempt == 2:
             self.puzzle_attempt3()
+            self.get_letter()
         elif self._attempt == 3:
             self.puzzle_attempt4()
+            self.get_letter()
         elif self._attempt == 4:      
             self.puzzle_attempt5()
+            self.get_letter()
         elif self._attempt == 5:       #I am no too sure if is "else" or "elif"
             self.puzzle_attempt6()
         
@@ -133,14 +143,3 @@ class Puzzle:
         print("   ^^^^^^^^^^^^^    ")  
 
     
-    # TODO
-    # make the methods/functions actually do stuff
-
-    #def watch_jumper(self,blah):
-        #pass
-
-    #def get_hint(self):
-        #pass
-
-    #def is_found(self):
-     #   pass
