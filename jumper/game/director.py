@@ -27,14 +27,14 @@ class Director:
         self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
         self._word_list = self._word_list.readlines()
         self.random_word = random.choice(self._word_list)
+        print(self.random_word)
         # scramble the random word and rewrite it as _____
         self._scrambled_word = ""
         self._scrambled_word = (len(self.random_word) -1 ) * "_"
-        print()
         print("Your word is " + self._scrambled_word)
         print()
 
-        self._puzzle = Puzzle(self.random_word)
+        self._puzzle = Puzzle()
         self._keep_playing = True
         self._jumper = Jumper()
 
@@ -60,13 +60,24 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        this_letter = self._puzzle.get_letter()
+        if this_letter == "":
+            print("You did not choose a letter.")
+            self._get_inputs()
+        print("You have guessed " + this_letter)
+        self.find_letter_in_word(this_letter)
+
+
+    def find_letter_in_word(self,this_letter):
+        letter_position = self.random_word.find(this_letter) + 1
+        print(letter_position)
+
+        #new_letter = self._puzzle.get_letter()
+        #print(new_letter)
+
+        #self._jumper.add_letter(new_letter)
         
-        # get_letter is in Puzzle.py
-        # add_letter is in Jumper.py
-        
-        new_letter = self._puzzle.get_letter()
-        self._jumper.add_letter(new_letter)
-        
+
         
     def _do_updates(self):
         """Keeps watch on where the player/jumper is moving.
