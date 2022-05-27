@@ -41,7 +41,7 @@ class Director:
         self._parachute = Parachute()
         self._puzzle_word = ""
         self._attempt = 0
-        #self._status = 0
+        self._status = 0
         #self._terminal_service = Terminal_service()
         # print random_word for testing
         #print(self._random_word)
