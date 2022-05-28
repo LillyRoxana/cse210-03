@@ -11,7 +11,7 @@ class word_list:
         self._word_list = self._word_list.readlines()
         self._random_word = random.choice(self._word_list).replace('\n', '')
         # print the random_word for testing purposes
-        print(self._random_word)
+        #print(self._random_word)
 
         self._word = self._random_word
 
@@ -24,7 +24,6 @@ class word_list:
                 guessing += letter
             else:
                 guessing += "_"
-
         return guessing
 
     def is_found(self, guessed_letters):
@@ -34,7 +33,7 @@ class word_list:
                 pass
             else:
                 return True
-
+        print("You found the Secret Word!!!")
         return False
 
     def lets_to_count_attempts(self, _guesser):
