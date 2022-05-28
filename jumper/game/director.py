@@ -12,7 +12,8 @@ class Director:
         self._puzzle = Puzzle()
         
     def start_new_game(self):
-        
+        print("Welcome to Jumper!\nThe rules are simple: guess the word\nbefore you spend your lifes\nAre you ready?")
+        self._puzzle.puzzle()
         while self._is_playing:
             self._get_inputs()
             self._do_updates()
@@ -25,7 +26,11 @@ class Director:
     def _get_inputs(self):
         
         new_guess = self._puzzle.get_letter("\nHi! Please type a letter: ")
-        self._jumper.add_letter(new_guess)
+        if new_guess.isalpha()==True:
+            self._jumper.add_letter(new_guess)
+        else:
+            print("Sorry that is not a valid input!!!\nUse letters only")
+            self._get_inputs()
         
     def _do_updates(self):
         
@@ -33,10 +38,8 @@ class Director:
         self._puzzle._attempt = self._word_generator.lets_to_count_attempts(self._jumper)
 
         self._status = self._puzzle._attempt
-
         
     def _do_outputs(self):
-        
         
         self._puzzle.show_letter()
         self._puzzle.get_attempt()
