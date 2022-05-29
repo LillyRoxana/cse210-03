@@ -15,8 +15,8 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
     │       │   └── word_list.txt     # contains the master word list
     │       ├── __init__.py           # Contains project configuration variables
     │       ├── director.py           # Directs the game action
-    │       ├── jumper.py             # #### NEEDS DESCRIPTION ####
-    │       ├── puzzle.py             # #### NEEDS DESCRIPTION ####
+    │       ├── jumper.py             # add new items to a list of Jumper
+    │       ├── puzzle.py             # Get and show letter, attempts and parachute of the game
     │       └── word_generator.py     # performs the game action
     └── README.md
 
