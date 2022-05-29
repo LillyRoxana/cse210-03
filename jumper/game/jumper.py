@@ -7,7 +7,6 @@ class Jumper:
     Attributes:
     letter (Jumper): The game's Jumper.
     """
-
     def __init__(self):
         """Constructs a new Jumper.
 
@@ -16,6 +15,5 @@ class Jumper:
         """
         self._letters = []
         
-
     def add_letter(self, letter):
         self._letters.append(letter.lower())
